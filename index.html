@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moving the Landice L8: take it apart, carry it out</title>
+<style>
+  :root { --ink:#1d2433; --muted:#5b6474; --accent:#1f4fa8; --warn:#b45309; --bg:#f7f7f5; --card:#fff; --line:#e3e3df; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--ink); background:var(--bg); }
+  main { max-width: 760px; margin: 0 auto; padding: 18px 16px 80px; }
+  h1 { font-size: 1.6rem; line-height:1.2; margin: 8px 0 6px; }
+  h2 { font-size: 1.2rem; margin: 0 0 8px; }
+  h3 { font-size: 1.05rem; margin: 18px 0 6px; }
+  .lede { color: var(--muted); margin: 0 0 18px; }
+  .card { background: var(--card); border:1px solid var(--line); border-radius: 12px; padding: 16px 16px 12px; margin: 14px 0; }
+  .step { position: relative; }
+  .step h2 { display:flex; gap:10px; align-items:flex-start; }
+  .num { flex:none; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color:#fff; font-weight:700; display:grid; place-items:center; font-size: .95rem; margin-top:-2px; }
+  .step.done { opacity: .55; }
+  .step.done .num { background: #2e7d32; }
+  label.check { display:flex; gap:8px; align-items:center; margin-top: 10px; font-weight:600; color: var(--accent); cursor:pointer; user-select:none; }
+  label.check input { width: 22px; height: 22px; }
+  figure { margin: 12px 0; }
+  figure img, figure svg { width: 100%; height: auto; border:1px solid var(--line); border-radius: 8px; background:#fff; display:block; }
+  figcaption { font-size: .85rem; color: var(--muted); margin-top: 4px; }
+  .warn { border-left: 4px solid var(--warn); background: #fff7ed; padding: 10px 12px; border-radius: 6px; margin: 10px 0; }
+  .tip { border-left: 4px solid var(--accent); background: #eef3fc; padding: 10px 12px; border-radius: 6px; margin: 10px 0; }
+  ul, ol { padding-left: 1.3em; margin: 6px 0; }
+  li { margin: 3px 0; }
+  .src { font-size: .82rem; color: var(--muted); }
+  nav.toc a { color: var(--accent); text-decoration: none; }
+  nav.toc ol { columns: 2; column-gap: 24px; }
+  @media (max-width: 520px) { nav.toc ol { columns: 1; } }
+  .two { display:grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  @media (max-width: 560px) { .two { grid-template-columns: 1fr; } }
+  footer { font-size:.82rem; color:var(--muted); margin-top: 30px; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Moving the Landice L8: take it apart, carry it out</h1>
+<p class="lede">Only the disassembly you need to get it up the basement stairs, through the house and into a truck. You split the treadmill into two pieces: the <b>upper assembly</b> (upright, handrails, tray and console, all still bolted together) and the <b>base</b>. That takes 6 bolts and 2 wire connectors. Tap each step's checkbox as you go; it remembers where you are.</p>
+
+<figure>
+<svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif" font-size="15">
+  <rect width="760" height="330" fill="#fff"/>
+  <!-- base -->
+  <g>
+    <polygon points="60,262 600,262 620,240 80,240" fill="#d9dde4" stroke="#333" stroke-width="2"/>
+    <rect x="60" y="262" width="540" height="26" fill="#c3c9d3" stroke="#333" stroke-width="2"/>
+    <polygon points="600,262 620,240 620,266 600,288" fill="#aab1bd" stroke="#333" stroke-width="2"/>
+    <polygon points="150,243 560,243 570,252 160,252" fill="#4b5563"/>
+    <!-- motor hood -->
+    <path d="M470,262 L470,226 Q472,214 490,214 L590,214 Q606,214 608,228 L608,262 Z" fill="#2b2f36" stroke="#111" stroke-width="2"/>
+    <text x="482" y="244" fill="#fff" font-size="13">motor cover</text>
+    <circle cx="90" cy="292" r="5" fill="#333"/><circle cx="580" cy="292" r="5" fill="#333"/>
+    <!-- brackets -->
+    <rect x="456" y="226" width="10" height="38" fill="#888" stroke="#333"/>
+    <rect x="612" y="206" width="10" height="38" fill="#888" stroke="#333"/>
+  </g>
+  <!-- upper assembly lifted -->
+  <g transform="translate(0,-8)">
+    <path d="M452,190 L470,40 Q478,18 505,18 L585,18 Q612,18 616,40 L626,170" fill="none" stroke="#9aa3b0" stroke-width="22" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M452,190 L470,40 Q478,18 505,18 L585,18 Q612,18 616,40 L626,170" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="0" opacity=".35"/>
+    <rect x="492" y="44" width="104" height="30" rx="6" fill="#2b2f36"/>
+    <text x="507" y="64" fill="#fff" font-size="13">console</text>
+    <path d="M470,98 L380,104" stroke="#9aa3b0" stroke-width="12" stroke-linecap="round"/>
+    <path d="M610,98 L700,104" stroke="#9aa3b0" stroke-width="12" stroke-linecap="round"/>
+    <text x="655" y="130" fill="#555" font-size="13">handrails</text>
+    <!-- harness -->
+    <path d="M452,190 q-8,14 4,24" fill="none" stroke="#1f4fa8" stroke-width="3"/>
+  </g>
+  <!-- arrows -->
+  <path d="M440,150 L440,105" stroke="#c0392b" stroke-width="4" marker-end="url(#ah)"/>
+  <path d="M650,150 L650,105" stroke="#c0392b" stroke-width="4" marker-end="url(#ah)"/>
+  <defs><marker id="ah" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="8" refY="8" orient="auto"><path d="M0,0 L16,8 L0,16 z" fill="#c0392b"/></marker></defs>
+  <text x="24" y="40" font-weight="700" font-size="17">Piece 1: upper assembly</text>
+  <text x="24" y="62" fill="#555">upright + handrails + tray + console, in one piece.</text>
+  <text x="24" y="82" fill="#555">Lifts straight up off the two frame brackets.</text>
+  <text x="24" y="102" fill="#1f4fa8">Blue: the wire harness that comes out the bottom.</text>
+  <text x="60" y="318" font-weight="700" font-size="17">Piece 2: base</text>
+  <text x="180" y="318" fill="#555">about 7 ft long and low; most of the machine's 360 lb.</text>
+</svg>
+<figcaption>My drawing, not to scale. The red arrows show the upper assembly lifting off the base.</figcaption>
+</figure>
+
+<nav class="toc card">
+<b>Steps</b>
+<ol>
+  <li><a href="#s1">Gather tools and people</a></li>
+  <li><a href="#s2">Lower it flat and unplug it</a></li>
+  <li><a href="#s3">Take off the motor cover</a></li>
+  <li><a href="#s4">Unplug the upper harness and ground wire</a></li>
+  <li><a href="#s5">Unbolt and lift off the upper assembly</a></li>
+  <li><a href="#s6">Button up the base</a></li>
+  <li><a href="#s7">Rig the lifting straps</a></li>
+  <li><a href="#s8">Up the stairs and out the door</a></li>
+  <li><a href="#s9">Load the truck</a></li>
+  <li><a href="#s10">Putting it back together</a></li>
+</ol>
+</nav>
+
+<!-- 1 -->
+<section class="card step" id="s1">
+<h2><span class="num">1</span>Gather tools and people</h2>
+<ul>
+  <li><b>Wrench or socket for the upright bolts.</b> The manual says 3/8&Prime; socket. These are 1/4-20 bolts, which often take a 7/16&Prime; head, so bring both sizes and test-fit before the day. A ratchet is easiest; a box-end or adjustable wrench works too. Avoid an open-end wrench on tight bolts (it rounds them).</li>
+  <li><b>Screwdriver</b> for the 4 motor cover screws (check the head type ahead of time).</li>
+  <li>Phone (for photos), flashlight, 3 zip-top bags, masking tape and a marker.</li>
+  <li>2 lifting straps, 2&ndash;3 moving blankets, work gloves, and ratchet straps or rope for the truck.</li>
+  <li><b>People:</b> 2 can carry the base on level floors with straps. Have a <b>third</b> person for the stairs.</li>
+</ul>
+<div class="tip">Walk the route first: measure the tightest doorway and the turn at the bottom and top of the stairs. Clear rugs and anything on the floor, and prop the doors open.</div>
+<label class="check"><input type="checkbox"> Done</label>
+</section>
+
+<!-- 2 -->
+<section class="card step" id="s2">
+<h2><span class="num">2</span>Lower it flat and unplug it</h2>
+<ol>
+  <li>Turn the treadmill on and bring the incline all the way down to 0%. The base carries much better flat, and you can't lower it once it's unplugged.</li>
+  <li>Press STOP twice, pull out the safety lanyard key and put it in a bag.</li>
+  <li>Turn off the power switch, unplug the cord from the wall, then unplug it from the socket on the front of the treadmill (labeled <i>AC Power</i> below). Coil the cord and bag it.</li>
+</ol>
+<figure><img src="img/l8-base.png" alt="L8 base assembly with the power switch and AC power socket at the front" loading="lazy">
+<figcaption>Service manual, Figure 3-3 (p. 18): L8 base with the motor cover off. The power socket and switch are on the front face.</figcaption></figure>
+<label class="check"><input type="checkbox"> Done</label>
+</section>
+
+<!-- 3 -->
+<section class="card step" id="s3">
+<h2><span class="num">3</span>Take off the motor cover</h2>
+<p>Four screws hold it, two on each side. Remove them, lift the cover straight up and set it somewhere it won't get stepped on. Put the screws in a bag marked <b>&ldquo;motor cover&rdquo;</b>.</p>
+<figure><img src="img/motor-cover.png" alt="Motor cover with its four screws shown removed" loading="lazy">
+<figcaption>Service manual, Figure 7-8 (p. 73): the 4 motor cover screws.</figcaption></figure>
+<div class="warn">Make sure the cord is out of both the wall and the treadmill before you take off the cover. The manual warns of dangerous voltages under it otherwise.</div>
+<label class="check"><input type="checkbox"> Done</label>
+</section>
+
+<!-- 4 -->
+<section class="card step" id="s4">
+<h2><span class="num">4</span>Unplug the upper harness and ground wire</h2>
+<p>One cable bundle, the <b>upper wire harness</b>, runs from the console down inside the upright and comes out at the bottom into the motor area. It plugs into the motor control board (the green board) and has a separate ground wire. These are the only two connections between the two pieces.</p>
+<ol>
+  <li><b>Photograph the board and the harness route first</b>, from two angles. On reassembly the harness runs <i>behind</i> the elevation motor.</li>
+  <li>Unplug the harness connector from the motor control board. Squeeze the latch and pull on the plug body, never on the wires.</li>
+  <li>Pull the ground wire off its push-on connector (where the harness ground meets the ground wire from the motor pan).</li>
+  <li>Free the harness from behind the elevation motor so it hangs loose and can come up with the upright.</li>
+</ol>
+<div class="two">
+<figure><img src="img/motor-wiring.png" alt="Motor area showing elevation motor, drive motor and motor control board" loading="lazy">
+<figcaption>Owner's manual, Figure 2-18 (p. 37): the harness plugs into the motor control board and runs behind the elevation motor.</figcaption></figure>
+<figure><img src="img/ground-point.png" alt="Base grounding point" loading="lazy">
+<figcaption>Owner's manual, Figure 2-17 (p. 37): grounding point.</figcaption></figure>
+</div>
+<figure><img src="img/harness-route.png" alt="Upper wire harness route through the upright" loading="lazy">
+<figcaption>Owner's manual, Figure 2-15 (p. 36): the harness (dashed blue) runs down inside one upright leg. It leaves with the upright.</figcaption></figure>
+<div class="tip">Leave the console on. Its ribbon cable and pulse cable stay inside the upper assembly, so there's nothing to unplug up there.</div>
+<label class="check"><input type="checkbox"> Done</label>
+</section>
+
+<!-- 5 -->
+<section class="card step" id="s5">
+<h2><span class="num">5</span>Unbolt and lift off the upper assembly</h2>
+<p>Each upright leg slides down over a bracket on the frame and is held by <b>3 bolts per side</b> (6 total), 1/4-20 &times; 1.25&Prime;.</p>
+<figure><img src="img/upright-bolts.png" alt="Upright legs sliding over frame brackets, 3 bolts per side" loading="lazy">
+<figcaption>Owner's manual, Figure 2-2 (p. 28), drawn for installation; you're doing it in reverse. Red arrows: the legs slide down over the brackets, so they come off by lifting straight up.</figcaption></figure>
+<ol>
+  <li><b>Have a helper hold the upright</b> by the handrails before you start. Without its bolts it's top-heavy and will tip.</li>
+  <li>Remove the outside bolt on each side first, then the two inside bolts (the manual installs the inside ones first). Bag all 6 as <b>&ldquo;upright bolts&rdquo;</b>.</li>
+  <li>Two people lift the upper assembly straight up off the brackets. The legs are a snug fit; rock it gently if it sticks. Watch the harness as it comes up so it doesn't snag.</li>
+  <li>Lay it down on a blanket, console side up. Tape the loose end of the harness to the leg so the connector doesn't drag.</li>
+</ol>
+<label class="check"><input type="checkbox"> Done</label>
+</section>
+
+<!-- 6 -->
+<section class="card step" id="s6">
+<h2><span class="num">6</span>Button up the base</h2>
+<ul>
+  <li>Set the motor cover back in place and tape it down with painter's tape. It protects the board and motors while you carry.</li>
+  <li>Tape the bags (bolts, screws, safety key, cord) to the upper assembly where they won't get lost.</li>
+  <li>Wrap the console in a blanket.</li>
+</ul>
+<label class="check"><input type="checkbox"> Done</label>
+</section>
+
+<!-- 7 -->
+<section class="card step" id="s7">
+<h2><span class="num">7</span>Rig the lifting straps</h2>
+<p>These instructions are for the common two-strap forearm kind (Forearm Forklift style). The shoulder-harness kind works the same way, but the loops go over your shoulders.</p>
+<figure>
+<svg viewBox="0 0 760 390" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif" font-size="14">
+  <rect width="760" height="390" fill="#fff"/>
+  <text x="20" y="26" font-weight="700" font-size="16">Side view</text>
+  <!-- floor -->
+  <line x1="20" y1="300" x2="520" y2="300" stroke="#999" stroke-width="2"/>
+  <!-- base -->
+  <rect x="120" y="196" width="280" height="30" fill="#c3c9d3" stroke="#333" stroke-width="2"/>
+  <rect x="340" y="176" width="60" height="22" rx="4" fill="#2b2f36"/>
+  <!-- person left -->
+  <g stroke="#333" stroke-width="5" stroke-linecap="round" fill="none">
+    <circle cx="70" cy="80" r="16" fill="#f3d6b8" stroke-width="2"/>
+    <line x1="70" y1="96" x2="74" y2="196"/>
+    <line x1="74" y1="196" x2="62" y2="296"/>
+    <line x1="74" y1="196" x2="90" y2="296"/>
+    <line x1="72" y1="116" x2="84" y2="170"/>
+    <line x1="84" y1="170" x2="128" y2="170"/>
+  </g>
+  <!-- person right -->
+  <g stroke="#333" stroke-width="5" stroke-linecap="round" fill="none">
+    <circle cx="450" cy="80" r="16" fill="#f3d6b8" stroke-width="2"/>
+    <line x1="450" y1="96" x2="446" y2="196"/>
+    <line x1="446" y1="196" x2="458" y2="296"/>
+    <line x1="446" y1="196" x2="430" y2="296"/>
+    <line x1="448" y1="116" x2="436" y2="170"/>
+    <line x1="436" y1="170" x2="392" y2="170"/>
+  </g>
+  <!-- strap -->
+  <path d="M118,172 L150,226 L370,226 L402,172" fill="none" stroke="#e67e22" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M150,229 L370,229" stroke="#e67e22" stroke-width="6"/>
+  <circle cx="118" cy="170" r="8" fill="none" stroke="#e67e22" stroke-width="4"/>
+  <circle cx="402" cy="170" r="8" fill="none" stroke="#e67e22" stroke-width="4"/>
+  <text x="150" y="258" fill="#b45309">strap runs under the frame</text>
+  <text x="96" y="148" fill="#b45309">loop on forearm</text>
+  <text x="20" y="326" fill="#555">Stand tall, forearms level, elbows at your sides. Lift with your legs.</text>
+  <text x="20" y="346" fill="#555">Shorten the straps until the load rides 3&ndash;6 in. off the floor.</text>
+
+  <!-- top view -->
+  <text x="560" y="26" font-weight="700" font-size="16">From above</text>
+  <rect x="610" y="60" width="70" height="250" fill="#d9dde4" stroke="#333" stroke-width="2"/>
+  <rect x="610" y="60" width="70" height="44" fill="#2b2f36"/>
+  <text x="619" y="87" fill="#fff" font-size="12">motor</text>
+  <line x1="580" y1="110" x2="710" y2="260" stroke="#e67e22" stroke-width="6"/>
+  <line x1="710" y1="110" x2="580" y2="260" stroke="#e67e22" stroke-width="6"/>
+  <circle cx="580" cy="110" r="7" fill="#e67e22"/><circle cx="710" cy="110" r="7" fill="#e67e22"/>
+  <circle cx="580" cy="260" r="7" fill="#e67e22"/><circle cx="710" cy="260" r="7" fill="#e67e22"/>
+  <text x="548" y="340" fill="#555">Cross the two straps in an X</text>
+  <text x="548" y="358" fill="#555">under the middle so the base</text>
+  <text x="548" y="376" fill="#555">can't slide out.</text>
+</svg>
+<figcaption>My drawing. Two people, one at each end; each strap runs under the base from one person's forearm to the other's.</figcaption>
+</figure>
+<ol>
+  <li>Tip the base up on one edge onto a blanket and slide both straps under it, crossed in an X near the middle. The X stops the base from sliding out of the straps.</li>
+  <li><b>Run the straps under the steel frame, never under the motor cover or the belt.</b></li>
+  <li>Each person stands at one end, puts one strap end over each forearm (loops just below the elbows) and grips the strap, palms up.</li>
+  <li>Shorten the straps until your arms are level and the base sits just off the floor. A strap that's too long makes you bend over.</li>
+  <li>Lift on a count by standing up with straight backs. Walk in small steps and turn your feet, not your back.</li>
+  <li>The motor end is heavier. Put the stronger person there.</li>
+</ol>
+<div class="warn">Don't wrap a strap around your hand or wrist. If someone loses their grip, you want it to slip off, not drag them down.</div>
+<label class="check"><input type="checkbox"> Done</label>
+</section>
+
+<!-- 8 -->
+<section class="card step" id="s8">
+<h2><span class="num">8</span>Up the stairs and out the door</h2>
+<figure>
+<svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif" font-size="14">
+  <rect width="760" height="360" fill="#fff"/>
+  <!-- stairs -->
+  <path d="M40,340 L40,310 L100,310 L100,280 L160,280 L160,250 L220,250 L220,220 L280,220 L280,190 L340,190 L340,160 L400,160 L400,130 L460,130 L460,100 L740,100 L740,340 Z" fill="#efe6d8" stroke="#8a7a62" stroke-width="2"/>
+  <!-- base on stairs (tilted along slope, motor end up top) -->
+  <g transform="translate(250,150) rotate(-27)">
+    <rect x="-150" y="-14" width="300" height="28" fill="#c3c9d3" stroke="#333" stroke-width="2"/>
+    <rect x="90" y="-34" width="60" height="22" rx="4" fill="#2b2f36"/>
+  </g>
+  <!-- lower person -->
+  <g stroke="#333" stroke-width="5" stroke-linecap="round" fill="none">
+    <circle cx="95" cy="150" r="15" fill="#f3d6b8" stroke-width="2"/>
+    <line x1="95" y1="165" x2="95" y2="245"/>
+    <line x1="95" y1="245" x2="80" y2="308"/>
+    <line x1="95" y1="245" x2="115" y2="280"/>
+    <line x1="95" y1="182" x2="118" y2="216"/>
+  </g>
+  <!-- upper person -->
+  <g stroke="#333" stroke-width="5" stroke-linecap="round" fill="none">
+    <circle cx="425" cy="20" r="15" fill="#f3d6b8" stroke-width="2"/>
+    <line x1="425" y1="35" x2="425" y2="105"/>
+    <line x1="425" y1="105" x2="412" y2="158"/>
+    <line x1="425" y1="105" x2="445" y2="128"/>
+    <line x1="425" y1="52" x2="390" y2="78"/>
+  </g>
+  <!-- arrow -->
+  <path d="M330,215 L215,272" stroke="#c0392b" stroke-width="4" marker-end="url(#ah2)"/>
+  <defs><marker id="ah2" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="8" refY="8" orient="auto"><path d="M0,0 L16,8 L0,16 z" fill="#c0392b"/></marker></defs>
+  <text x="300" y="262" fill="#c0392b">weight shifts downhill</text>
+  <text x="20" y="104" font-weight="700">Below: strongest person</text>
+  <text x="20" y="124" fill="#555">carries most of the load</text>
+  <text x="480" y="40" font-weight="700">Above: guides and steers</text>
+  <text x="480" y="60" fill="#555">calls each step</text>
+  <text x="480" y="150" font-weight="700">Third person: spotter</text>
+  <text x="480" y="170" fill="#555">beside the load, hands on the frame,</text>
+  <text x="480" y="190" fill="#555">lifts the low end over the top step</text>
+</svg>
+<figcaption>My drawing. Coming up out of the basement, the person below carries more of the weight.</figcaption>
+</figure>
+<ul>
+  <li><b>Carry the base up the stairs first</b>, while everyone is fresh. Then bring up the upper assembly, which two people can carry by the handrails.</li>
+  <li>Keep the <b>motor end uphill</b>. The slope already pushes extra weight onto the person below; putting the heavy end at the top evens it out.</li>
+  <li>On stairs the weight slides toward the person below. That person is the strongest and should have their legs braced, not their arms.</li>
+  <li>Move one step at a time on a call ("step... step"). Rest the load on a stair edge, padded with a blanket, when anyone needs a break.</li>
+  <li>At the top, the hard part is getting the low end over the last step. That's where the third person lifts.</li>
+  <li>Through tight doorways you can tip the base up on its long side (belt facing the wall) on a blanket. Never rest it on the motor cover.</li>
+</ul>
+<label class="check"><input type="checkbox"> Done</label>
+</section>
+
+<!-- 9 -->
+<section class="card step" id="s9">
+<h2><span class="num">9</span>Load the truck</h2>
+<ul>
+  <li>Lay a blanket on the bed. Slide the base in <b>flat, belt side up</b>, motor end toward the cab.</li>
+  <li>Strap it to the tie-down points across the frame (not across the motor cover).</li>
+  <li>Lay the upper assembly next to it or on top of blankets, console wrapped, and strap it down too.</li>
+  <li>Put the bags of hardware in the cab so they don't blow away.</li>
+</ul>
+<label class="check"><input type="checkbox"> Done</label>
+</section>
+
+<!-- 10 -->
+<section class="card step" id="s10">
+<h2><span class="num">10</span>Putting it back together</h2>
+<p>Run these steps backward. For the installation steps from the owner's manual:</p>
+<ul>
+  <li>Slide the upright down over the brackets, then put the 3 bolts in each side, <b>inside bolts first</b>, then the outside one (owner's manual p. 28).</li>
+  <li>Route the harness <b>behind the elevation motor</b>, plug it into the motor control board and reconnect the ground wire (owner's manual p. 36&ndash;37). Compare with your photos.</li>
+  <li>Motor cover, power cord, safety key. Turn it on and test the incline and the belt at low speed.</li>
+  <li>Leave 6 ft clear behind it and 18 in. on each side (owner's manual p. 27).</li>
+</ul>
+<label class="check"><input type="checkbox"> Done</label>
+</section>
+
+<p class="src"><b>Sources:</b> Landice <a href="https://cdn.shopify.com/s/files/1/1800/6113/files/73210-11_90-Series_User_Manual_WEB.pdf">L7/L8 90 Series Owner's Manual (73210-11)</a> and <a href="https://cdn.shopify.com/s/files/1/1800/6113/files/L7_L8_L9_Treadmill_90_Series_Service_Manual.pdf">L7/L8/L9 90 Series Service Manual</a>. The manual figures are Landice's; the three illustrations without a figure number are mine. The manual has no section on moving the machine, so the order of steps and the carrying advice are my own.</p>
+<footer>Your checkboxes are saved on this device only. <a href="#" id="reset">Clear checkboxes</a></footer>
+</main>
+<script>
+  const boxes = [...document.querySelectorAll('.step input[type=checkbox]')];
+  const KEY = 'landice-move-v1';
+  const saved = JSON.parse(localStorage.getItem(KEY) || '[]');
+  boxes.forEach((b, i) => {
+    b.checked = !!saved[i];
+    b.closest('.step').classList.toggle('done', b.checked);
+    b.addEventListener('change', () => {
+      b.closest('.step').classList.toggle('done', b.checked);
+      localStorage.setItem(KEY, JSON.stringify(boxes.map(x => x.checked)));
+    });
+  });
+  document.getElementById('reset').onclick = e => { e.preventDefault(); localStorage.removeItem(KEY); boxes.forEach(b => { b.checked = false; b.closest('.step').classList.remove('done'); }); };
+</script>
+</body>
+</html>
